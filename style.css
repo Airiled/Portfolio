@@ -5,6 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 /* NAVBAR */
 
 header{
@@ -18,6 +19,7 @@ header{
     justify-content: right;
     background-color: black;
     height: 60px;
+    width: 100%;
 }
 
 .navbar > img{
@@ -115,13 +117,11 @@ header{
 
 .section-initial-image{
     height: 697px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .section-initial-image::before{
-    opacity: 0.7;
     content: "";
     background-image: url('./img/laptop.jpeg');
     background-size: cover;
@@ -135,9 +135,10 @@ header{
 
 .section-initial-h4 {
     position: relative;
+    padding-top: 10%;
+    text-align: right;
     color: black;  
     font-size: 8rem;
-    margin-left: 35%;
 }
 
 /* RESPONSIVE PRIMERA SECCION */
@@ -158,7 +159,7 @@ header{
     overflow:hidden;
     padding-top: 100px;
     margin-top: 100px;
-    background: linear-gradient(lightgrey, 65%, aquamarine);
+    background: linear-gradient(white, 65%, aquamarine);
 }
 
 .section-second:hover{
@@ -266,6 +267,7 @@ header{
     position: fixed; /* Posición fija */
     z-index: 2; /* Se situará por encima de otros elementos de la página*/
     padding-top: 150px; /* El contenido estará situado a 200px de la parte superior */
+    align-items: center;
     left: 0;
     top: 0;
     width: 100%; /* Ancho completo */
@@ -343,22 +345,19 @@ header{
 .divContainer{
     width: 100%;
     height: 700px;
-    background-color: white;
 }
 
 .divHeader{
     width: 100%;
     height: 200px;
-    background-color: black;
-    border-top: 2px solid grey;
-    border-bottom: 2px solid white;
+    background: linear-gradient(blue, 25%, rgb(129, 223, 255));
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
 }
 
 .divHeader > h2{
-    color: white;
-    text-shadow: -1px -4px 2px grey;
+    color: black;
+    text-shadow: 1px 2px 5px black;
     text-align: center;
     padding-top: 50px;
     font-size: 4rem;
@@ -367,6 +366,7 @@ header{
 .gridContainer{
     display: grid;
     column-gap: 50px;
+    
 }
 
 .gridContainer > div > h3{
@@ -377,20 +377,22 @@ header{
 }
 
 .proyectsLinks{
-    color: lightgrey;
+    color: black;
     text-decoration: none;
+    border-bottom: 1px solid black;
+    border-bottom-style: dashed;
 }
 
 .proyectsLinks:hover{
-    color: white;
-    text-shadow: 2px 2px 2px brown;
+    color: black;
+    text-shadow: 2px 2px 5px black;
     font-size: 3.3rem;
 }
 
 .gridContainer > div > p{
     padding-left: 15px;
     padding-right: 15px;
-    color: rgb(230, 230, 230);
+    color: black;
     margin-top: 30px;
     text-align: center;
     font-size: 1.6rem;
@@ -406,8 +408,8 @@ header{
     height: 490px;
     grid-column: 1;
     grid-row: 1;
-    background-color: black;
-
+    background: linear-gradient(rgb(129, 223, 255), 85%, white);
+    border: 2px solid black;
 }
 
 .firstColumn > img{
@@ -419,21 +421,23 @@ header{
     height: 490px;
     grid-column: 2;
     grid-row: 1;
-    background-color: black;
-
+    background: linear-gradient(rgb(129, 223, 255), 85%, white);
+    border: 2px solid black;
 }
 
 .thirdColumn{
     height: 490px;
     grid-column: 3;
     grid-row: 1;
-    background-color: black;
+    background: linear-gradient(rgb(129, 223, 255), 85%, white);
+    border: 2px solid black;
 }
 
 /* FOOTER */
 
 .footer{
-    background-color: black;
+    /* background: linear-gradient(white, 55%, rgb(129, 223, 255)); */
+    background: linear-gradient(rgb(129, 223, 255), 90%, black);
     margin-top: 50px;
     height: 150px;
     width: 100%;
@@ -444,11 +448,11 @@ header{
     padding-top: 50px;
     left: 650px;
     font-size: 1.5rem;
-    color: rgb(180, 180, 180);
+    color: black;
 }
 
 .footer-p:nth-child(1){
-    color:  rgb(221, 221, 221);
+    color:  black;
     left: 700px;
     padding-top: 10px;
 }
@@ -477,17 +481,34 @@ header{
 @media (max-width: 1200px){
     .header{display: none;}
 
+    body {
+        background: linear-gradient(
+          white 40% 60% 
+      );
+    }
+
     /* RESPONSIVE PRIMERA SECCION */
 
+    .section-initial-image{
+        height: 697px; 
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     .section-initial-h4{
-        text-align: center;
+        text-align: start;
         margin: 0;
+        padding: 0;
+        padding-top: 20%;
+        text-align: right;
         font-size: 6rem;
     } 
 
     /* RESPONSIVE SEGUNDA SECCION */
     
     .section-second-div{
+        margin-top: 100px;
+        padding-top: 0;
         box-sizing: border-box;
         width: 100%;
         border-radius: 40px;
@@ -500,13 +521,18 @@ header{
 
     .section-second-div > h2{
         font-size: 5rem;
-        text-shadow: 1px 3px 1px lightgrey;
+        text-shadow: 1px 3px 5px grey;
         color: white;
     }
 
     .section-second:hover{
         box-shadow: -10px 5px 30px black;
     }
+
+
+    /* MODAL */
+
+    
 
     /* RESPONSIVE TERCERA SECCION */
 
