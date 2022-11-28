@@ -470,11 +470,11 @@ header{
 
 /* RESPONSIVE */
 
-@media (min-width: 801px){
+@media (min-width: 1200px){
     .responsive-header{display: none;}
 }
 
-@media (max-width: 800px){
+@media (max-width: 1200px){
     .header{display: none;}
 
     /* RESPONSIVE PRIMERA SECCION */
