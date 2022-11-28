@@ -8,7 +8,7 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="navbar">
             <img src="./img/desarrollador-de-software.png" alt="Icono Web">
             <h4 class="navbar-tittle">DESARROLLADOR JR</h4>
@@ -17,6 +17,21 @@
             <p id="conocimientos">MIS CONOCIMIENTOS</p>
             <p id="proyectos">PROYECTOS</p>
             <p id="contacto">CONTACTO</p>
+        </div>
+    </header>
+
+    <header class="responsive-header">
+        <div class="responsive-navbar">
+            <img src="./img/desarrollador-de-software.png" alt="Icono Web">
+            <img class="navbarMenu" src="./img/menu.png" alt="Desplegable Menu">
+        </div>
+
+        <div class="responsive-menu oculto">
+            <p id="responsive-inicio">INICIO</p>
+            <p id="responsive-sobre-mi">SOBRE MI</p>
+            <p id="responsive-conocimientos">MIS CONOCIMIENTOS</p>
+            <p id="responsive-proyectos">PROYECTOS</p>
+            <p id="responsive-contacto">CONTACTO</p>
         </div>
     </header>
 
@@ -49,20 +64,19 @@
         </div>
     </section>
 
-    <section class="section-third">
+    <section>
         <div class="section-flex-container">
             <div id="mis-conocimientos">
                 <h2>MIS CONOCIMIENTOS</h2>
             </div>
-
+    
             <div class="section-third-div">
-                <div class="scroll-horizontal">
-                    <div class="scroll-container">
-                    </div>
+                <div class="scroll-container">
                 </div>
             </div>
         </div>
     </section>
+    
 
     <div id="ventanaModal" class="modal">
         <div class="modal-content">            

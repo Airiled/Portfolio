@@ -1,13 +1,23 @@
 window.addEventListener('load', ()=>{
     let indice = 0;
     showTechnologies(indice);
-})
+});
 
 // Establecemos los valores para los detalles del modal
 var modal = document.getElementById("ventanaModal");
 //Hace referencia al div 'modal-content'
 var modalContent = document.querySelector('.modal-content'); 
 
+const responsiveMenu = document.querySelector('.navbarMenu').addEventListener('click', toggleResponsiveMenu);
+
+function toggleResponsiveMenu(){
+    const responsiveMenuItems = document.querySelector('.responsive-menu');
+    const isMenuResponsiveOpen = responsiveMenuItems.classList.contains('oculto');
+
+    if(!isMenuResponsiveOpen) responsiveMenuItems.classList.add('oculto');
+    if(isMenuResponsiveOpen) responsiveMenuItems.classList.remove('oculto');
+
+}
 
 
 const tecnologias = [{
@@ -64,11 +74,38 @@ function navbarMenuInteractions(){
     
     
     const proyectos = document.getElementById('proyectos').addEventListener('click', ()=>{
-        window.scrollTo(0, 2465);
+        window.scrollTo(0, 2550);
     });
     
     const contacto = document.getElementById('contacto').addEventListener('click', ()=>{
         window.scrollTo(0, 3000);
+    });
+
+    const responsiveInicio = document.getElementById('responsive-inicio').addEventListener('click', ()=>{
+        window.scrollTo(0, 0);
+        toggleResponsiveMenu();
+    });
+    
+    
+    const responsiveSobreMi = document.getElementById('responsive-sobre-mi').addEventListener('click', ()=>{
+        window.scrollTo(0, 1000);
+        toggleResponsiveMenu();
+    });
+    
+    const responsiveConocimientos = document.getElementById('responsive-conocimientos').addEventListener('click', ()=>{
+        window.scrollTo(0, 1760);
+        toggleResponsiveMenu();
+    });
+    
+    
+    const responsiveProyectos = document.getElementById('responsive-proyectos').addEventListener('click', ()=>{
+        window.scrollTo(0, 2750);
+        toggleResponsiveMenu();
+    });
+    
+    const resposiveContacto = document.getElementById('responsive-contacto').addEventListener('click', ()=>{
+        window.scrollTo(0, 3000);
+        toggleResponsiveMenu();
     });
 }
 

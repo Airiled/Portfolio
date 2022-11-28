@@ -38,19 +38,72 @@ header{
     text-align: center;
 }
 
-.navbar > p:nth-child(3){
-    padding-top: 5px;
-}
-
-.navbar > p:nth-child(6){
-    padding-top: 5px;
-}
-
-.navbar > p:nth-child(7){
+.navbar > p:nth-child(3),
+.navbar > p:nth-child(6),
+.navbar > p:nth-child(7)
+{
     padding-top: 5px;
 }
 
 .navbar > p:hover{
+    font-size: 16.5px;
+    cursor: pointer;
+    color: white;
+}
+
+/* RESPONSIVE NAVBAR */
+
+.responsive-header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.responsive-navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 60px;
+    width: 100%;   
+}
+
+.responsive-navbar > img{
+    padding: 3px;
+    background-color: aquamarine;
+}
+
+.responsive-navbar-tittle{
+    margin: auto;
+    color: rgb(235, 235, 235);
+}
+
+.responsive-navbar > p{
+    margin: 15px 40px 20px 20px;
+    color: rgb(235, 235, 235);
+    text-align: center;
+}
+
+.responsive-menu{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    height: 255px;
+}
+
+.responsive-menu > p{
+    color: white;
+    padding-top: 25px;
+    padding-bottom: 6px;
+    text-align: center;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.5);
+    border-bottom-style: dashed;
+}
+.responsive-menu > p:nth-child(5){
+    border: initial;
+    padding-bottom: 5px;
+}
+
+.responsive-menu > p:hover{
     font-size: 16.5px;
     cursor: pointer;
     color: white;
@@ -87,6 +140,10 @@ header{
     margin-left: 35%;
 }
 
+/* RESPONSIVE PRIMERA SECCION */
+
+
+
 /* SEGUNDA SECCION */
 
 .section-second{
@@ -122,14 +179,13 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 #mis-conocimientos{
     background: linear-gradient(aquamarine, 25%, white);
-    height: 150px;
     width: 80%;
     margin-top: 100px;
-    margin-left: 150px;
     margin-bottom: 10px;
     text-align: center;
     padding-top: 150px;
@@ -146,27 +202,10 @@ header{
     -webkit-text-stroke: 1px lightgrey;
 }
 
-.section-third-div{
-    background-color: white;
-    height: 400px;
-    width: 80%;
-    margin-left: 150px;
-    margin-bottom: 150px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-.scroll-horizontal{
-    background-color: white;
-    height: 400px;
-    width: 600px;
-    margin-left: 330px;   
-}
-
 .scroll-container{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .tecnologia{
@@ -174,8 +213,8 @@ header{
     height: 500px;
     width: 400px;
     text-align: center;
-    margin-left: 70px;
-    margin-right: 20px;
+    margin-top: 50px;
+    margin-bottom: 150px;
     padding-left: 30px;
     padding-right: 30px;
     border-radius: 30px;
@@ -327,7 +366,6 @@ header{
 
 .gridContainer{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 50px;
 }
 
@@ -427,4 +465,105 @@ header{
     height: 20px;
     margin-right: 10px;
     background-color: white;
+}
+
+
+/* RESPONSIVE */
+
+@media (min-width: 801px){
+    .responsive-header{display: none;}
+}
+
+@media (max-width: 800px){
+    .header{display: none;}
+
+    /* RESPONSIVE PRIMERA SECCION */
+
+    .section-initial-h4{
+        text-align: center;
+        margin: 0;
+        font-size: 6rem;
+    } 
+
+    /* RESPONSIVE SEGUNDA SECCION */
+    
+    .section-second-div{
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 40px;
+        background: black;
+        padding: 15px;
+        height: 600px;
+        color: white;
+        overflow: auto;
+    }
+
+    .section-second-div > h2{
+        font-size: 5rem;
+        text-shadow: 1px 3px 1px lightgrey;
+        color: white;
+    }
+
+    .section-second:hover{
+        box-shadow: -10px 5px 30px black;
+    }
+
+    /* RESPONSIVE TERCERA SECCION */
+
+    #mis-conocimientos{margin: 0; padding: 0; padding-top: 25px; background: none;}
+
+    .section-flex-container{
+        margin-top: 100px;
+        background: linear-gradient(aquamarine, 25%, white);
+    }
+
+
+    /* RESPONSIVE CUARTA SECCION */
+
+    .gridContainer{
+        display: grid;
+        column-gap: 10px;
+    }
+
+    .gridContainer > div{
+        overflow: auto;
+    }
+
+    .gridContainer > div > h3{
+        padding-top: 20px;
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .gridContainer > div > p{
+        font-size: 1.3rem;
+        line-height: 25px;
+    }
+    
+
+    .proyectsLinks:hover{
+        color: white;
+        text-shadow: 2px 2px 2px brown;
+        font-size: 2.2rem;
+    }
+
+    .gridContainer > div:nth-child(3) > p{
+        margin: 35px;
+    }
+
+    /* RESPONSIVE FOOTER */
+
+    .footer-p{
+        position: initial;
+        text-align: center;
+        left: 0;
+        padding: 0;
+    }
+    .footer-p:nth-child(2){
+        padding: 0;
+    }
+    .footer-p:nth-child(3){
+        padding: 0;
+    }
 }
