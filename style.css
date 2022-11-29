@@ -521,10 +521,6 @@ header{
     }
 
 
-    /* MODAL */
-
-    
-
     /* RESPONSIVE TERCERA SECCION */
 
     #mis-conocimientos{margin: 0; padding: 0; padding-top: 25px; background: none;}
@@ -569,6 +565,195 @@ header{
         margin: 35px;
     }
 
+    /* RESPONSIVE FOOTER */
+
+    .footer-p{
+        position: initial;
+        text-align: center;
+        left: 0;
+        padding: 0;
+    }
+    .footer-p:nth-child(2){
+        padding: 0;
+    }
+    .footer-p:nth-child(3){
+        padding: 0;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 450px){
+    .header{display: none;}
+
+    body {
+        background: linear-gradient(
+          white 40% 60% 
+      );
+    }
+
+    /* RESPONSIVE PRIMERA SECCION */
+
+    .section-initial-image{
+        height: 697px; 
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .section-initial-h4{
+        text-align: start;
+        margin: 0;
+        padding: 0;
+        padding-top: 20%;
+        text-align: right;
+        font-size: 3.5rem;
+        word-wrap: break-word;
+    } 
+
+    /* RESPONSIVE SEGUNDA SECCION */
+    
+    .section-second-div{
+        margin-top: 150px;
+        padding-top: 0;
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 40px;
+        background: linear-gradient(white, 65%, aquamarine);
+        padding: 15px;
+        height: 600px;
+        color: black;
+        overflow: auto;
+    }
+
+    .section-second-div > h2{
+        font-size: 4rem;
+        text-shadow: 1px 3px 5px lightgrey;
+        color: black;
+    }
+
+    .section-second:hover{
+        box-shadow: -10px 5px 30px black;
+    }
+
+    /* RESPONSIVE TERCERA SECCION */
+
+    #mis-conocimientos{
+        margin: 0; 
+        padding: 0; 
+        padding-top: 25px; 
+        background: none;
+    }
+
+    #mis-conocimientos > h2{
+        color: black;
+        font-size: 2.2rem;
+    }
+
+    .tecnologia{
+        height: 400px;
+        width: 300px;
+    }
+    
+    .tecnologia > h2{
+        color: black;
+    }
+
+    .next{
+        height: 35px;
+        margin-top: 5px;
+    }
+
+    .previous{
+        height: 35px;
+    }
+
+    /* RESPONSIVE CUARTA SECCION */
+
+    .gridContainer{
+        display: grid;
+        column-gap: 10px;
+    }
+
+    .gridContainer > div{
+        overflow: auto;
+    }
+
+    .divHeader > h2{
+        font-size: 3rem;
+        padding-top: 75px;
+    }
+
+    .gridContainer > div > h3{
+        padding-top: 20px;
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .gridContainer > div > p{
+        font-size: 1.3rem;
+        line-height: 25px;
+    }
+    
+
+    .proyectsLinks:hover{
+        color: black;
+        text-shadow: 2px 2px 5px black;
+        font-size: 2.3rem;
+    }
+
+    .gridContainer > div > p{
+        font-size: 1.2rem;
+        margin: 0;
+        margin-top: 35px;
+        padding-left: 5px;
+        padding-right: 5px;
+        line-height: 22px;
+        word-wrap: break-word;
+    }
+
+    .gridContainer > div:nth-child(3) > p{
+        font-size: 1.2rem;
+        margin: 0;
+        margin-top: 35px;
+        padding-left: 5px;
+        padding-right: 5px;
+        line-height: 22px;
+    }
+
+    /* MODAL */
+
+    .modal {
+        display: none; /* Por defecto, estará oculto */
+        position: fixed; /* Posición fija */
+        z-index: 2; /* Se situará por encima de otros elementos de la página*/
+        padding-top: 150px; /* El contenido estará situado a 200px de la parte superior */
+        align-items: center;
+        left: 0;
+        top: 0;
+        width: 100%; /* Ancho completo */
+        height: 100%; /* Algura completa */
+        background-color: rgba(0,0,0,0.5); /* Color negro con opacidad del 50% */
+    }
+    
+    .modal-content {
+        position: relative; /* Relativo con respecto al contenedor -modal- */
+        width: 300px;
+        height: 500px;
+        background-color: rgb(240, 240, 240);
+        margin: auto;
+        padding: 20px;
+        border-radius: 15px;
+        display: flex;
+    }
+    
+    .imgModal{
+        margin-top: 50px;
+        height: 430px;
+        border-radius: 5px;
+        display: none;
+    }
     /* RESPONSIVE FOOTER */
 
     .footer-p{

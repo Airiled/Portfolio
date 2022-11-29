@@ -99,7 +99,7 @@ function navbarMenuInteractions(){
     
     
     const responsiveProyectos = document.getElementById('responsive-proyectos').addEventListener('click', ()=>{
-        window.scrollTo(0, 2750);
+        window.scrollTo(0, 2600);
         toggleResponsiveMenu();
     });
     
